@@ -29,6 +29,8 @@ let firstName = "Ram";
 let lastName = "Umang";
 let username;
 
+
+/*
 //displaying username in scren 
 if(username){
     document.write(`Welcome ${username}`)
@@ -41,3 +43,11 @@ else{
 
 username = username || `${firstName}Guest${Date.now()}`;
 document.write(`Welcome ${username}`)
+*/
+
+
+//------------------------------ Guard clause ------------------------------------
+if(!username){
+    username = prompt("Please enter your username:");
+}
+document.write(`Welcome @${username}`);
