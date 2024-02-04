@@ -85,11 +85,11 @@
 
 let fruits1 = ['apple', 'melon', 'orange', 'kiwi'];
 // removing elements using splice 
-fruits1.splice(0,2); //starts counting from 0, remove 2 elemets from 0
+fruits1.splice(0, 2); //starts counting from 0, remove 2 elemets from 0
 console.log(fruits1);
 
 // replacing the elements using splice 
-fruits1.splice(1,2,'Grapes','Guava'); //leaves 0 index, strart from 1 and replace 2 elements
+fruits1.splice(1, 2, 'Grapes', 'Guava'); //leaves 0 index, strart from 1 and replace 2 elements
 console.log(fruits1);
 console.log(fruits1.splice()); //return remaing arguements in the form of array 
 
@@ -99,7 +99,56 @@ const returnvalue2 = fruits2.reverse();
 console.log(fruits2);
 console.log(returnvalue2);
 
-//ix. -> sort() : sorts array in descending order : use asci value to sort
-let alpha = ['a', 'z', 'e', 'zebra', 'apple', 'guava', 'Ball', 'ball'];
-alpha.sort(-1);
+//ix. -> sort() : sorts array in ascending order : use asci value to sort
+let alpha = ['a', 'z', 'zebra', 'apple', 'Ball', 'ball']; // Capital letters comes first so while sorting we need to change all elemets in small alphabet then use sort then make it capital
+alpha.sort();
 console.log(alpha);
+
+// sort in descending order : hint using method chaining
+// method chaing :  if the result returns array we can use another method using '.'
+alpha.sort().reverse();
+console.log(alpha);
+
+let arrNum = [353, 1, 4, 664, 43, 234, 221, 676]; //didnt give expected 1st, it takes all values as string so it will return as : 1,111,123,2,223,4,5 like this 
+arrNum.sort();
+console.log(arrNum);
+
+// -- callback function / compared function work like :::::
+// let check = arrNum.sort((a, b) => console.log(`${a} adnd ${b} are being compared`));
+// // "-" gives negative value or positive vaue or zero
+// // if output is negative -> a should placed before b
+// // if ouput is positive -> a should placed after b
+// // zero -> no changes 
+
+// to solve this problem .sort() mathod takes a callback function (specially called compare function) as it argument.
+let output = arrNum.sort((a, b) => a - b);
+console.log(arrNum);
+
+let output2 = arrNum.sort((a, b) => b - a);   //descending
+console.log(arrNum);
+
+let alpha2 = ['a', 'z', 'zebra', 'apple', 'Ball', 'ball', 'cat', 'g']; 
+console.log(alpha2.sort((a,b)=> b.localeCompare(a)));  //descending 
+
+// work : Display the reverse of any array by passing data using function 
+function Num(arrFunc){
+    return arrFunc.sort();
+}
+console.log(Num(arrFunc=[1,4,6,3,2,111]));
+
+//using arrow function
+const Num2 = arrFunc => arrFunc.sort();
+console.log(Num2([1, 4, 6, 3, 2, 111]));
+console.log(Num2([3,2,4,5,3,234,63,234]));
+
+function fun(){
+    for(let i=arr4.legth;i>0;i--){
+        return (arr4[i]);
+    }
+}
+fun(arr4 = [1,4,2,10,5]);
+
+
+
+
+

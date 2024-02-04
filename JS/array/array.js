@@ -130,7 +130,30 @@ console.log(arrNum);
 let alpha2 = ['a', 'z', 'zebra', 'apple', 'Ball', 'ball', 'cat', 'g']; 
 console.log(alpha2.sort((a,b)=> b.localeCompare(a)));  //descending 
 
+// work : Display the reverse of any array by passing data using function  without sorting
+
+function fun(arr4){
+    
+    for(let i=arr4.length-1;i>=0;i--){
+        console.log(arr4[i]);
+    }
+}
+fun([1,4,2,10,5]);
+fun([100,200,500,1,4,2,4,3,9,5]);
+
+console.log("with sorting now");
 
 
+// work : Display the reverse of any array by passing data using function  with sorting
+function fun(arr5){
+    arr5.sort(function(a,b){
+        return a-b;
+    });
 
+    for(let i=arr5.length-1;i>=0;i--){
+        console.log(arr5[i]);
+    }
+}
+fun([1,4,2,10,5]);
+fun([100,200,500,1,4,2,4,3,9,5]);
 
