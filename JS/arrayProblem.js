@@ -7,4 +7,4 @@ console.log(arr2);
 // call stack ----- heap 
 
 // Solution to solve this problem 
-1. let arr2 = [...arr1];  // ... = spread operator
+// 1. let arr2 = [...arr1];  // ... = spread operator
