@@ -127,10 +127,7 @@ console.log(arrNum);
 let output2 = arrNum.sort((a, b) => b - a);   //descending
 console.log(arrNum);
 
-let alpha2 = ['a', 'z', 'zebra', 'apple', 'Ball', 'ball', 'cat', 'g']; 
-console.log(alpha2.sort((a,b)=> b.localeCompare(a)));  //descending 
-
-let alpha23 = ['a', 'z', 'zebra', 'apple', 'Ball', 'ball', 'cat', 'g'];
+let alpha2 = ['a', 'z', 'zebra', 'apple', 'Ball', 'ball', 'cat', 'g'];
 console.log(alpha2.sort((a, b) => b.localeCompare(a)));  //descending 
 
 // work : Display the reverse of any array by passing data using function  without sorting
@@ -447,7 +444,6 @@ let [m,n,o, ...others] = [83,43,33,23,65,76];
 console.log(m,n,o,others);  //output : 83 43 33 [ 23, 65, 76 ]
 
 // Left hand side (rest parameter): Right hand side (spread operator)
->>>>>>> 892e2a49028524cd7730197676b1484a26b215a7
 
 
 
